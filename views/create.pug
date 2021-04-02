@@ -1,0 +1,30 @@
+extends layout.pug
+
+block content
+  main.content
+    h1.form-title Add employee form
+
+
+    
+    if errorPosition
+      p.error Please insert the Position
+    else if errorTitle 
+      p.error Please insert the Title!
+    else if errorDesc
+      p.error Please insert the Description!
+
+    if success
+      p.success Data is saved!
+
+    
+    form.form(method='POST' action='/create')
+      label Position
+      input(type="text" name='position')
+
+      label Title
+      input.input(type='text' name='title')
+
+      label Description
+      textarea.input(rows='10' cols='8' name='desc')
+
+      button.btn Add Employee

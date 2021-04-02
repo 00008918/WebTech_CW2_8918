@@ -1,0 +1,10 @@
+extends layout.pug
+
+block content
+  main.content
+    h1.note-title All employees
+
+    each value in recordList
+      div.note-wrapper
+        a.note(href=`/records/${  value.id }`)= value.title
+        a.delete(href=`/${ value.id }/delete`) Delete
