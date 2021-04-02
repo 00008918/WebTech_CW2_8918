@@ -8,10 +8,10 @@ block content
     
     if errorPosition
       p.error Please insert the Position
-    else if errorTitle 
-      p.error Please insert the Title!
-    else if errorDesc
-      p.error Please insert the Description!
+    else if errorName 
+      p.error Sorry, Name cannot be empty!
+    else if errorAge
+      p.error Sorry, Age cannot be empty or less than 18!
 
     if success
       p.success Data is saved!
@@ -19,12 +19,12 @@ block content
     
     form.form(method='POST' action='/create')
       label Position
-      input(type="text" name='position')
+      input.input(type="text" name='position')
 
-      label Title
-      input.input(type='text' name='title')
+      label Name
+      input.input(type='text' name='name')
 
-      label Description
-      textarea.input(rows='10' cols='8' name='desc')
+      label Age
+      input.input(type="number" name="age")
 
       button.btn Add Employee

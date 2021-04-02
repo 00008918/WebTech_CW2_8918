@@ -18,18 +18,18 @@ app.get('/create', (req, res) => {
 })
 
 app.post('/create', (req, res) => {
-	const title = req.body.title;
-	const desc = req.body.desc;
+	const name = req.body.name;
+	const age = req.body.age;
 	const position = req.body.position;
 
 	if (position.trim() === ""){
 		res.render("create", { errorPosition: true })
 	}
-	else if (title.trim() === ""){
-		res.render("create", { errorTitle: true })
+	else if (name.trim() === ""){
+		res.render("create", { errorName: true })
 	}
-	else if (desc.trim() === ""){
-		res.render("create", { errorDesc: true })
+	else if (age.trim() === "" || parseInt(age) <= 18){
+		res.render("create", { errorAge: true })
 	}
 	
 	else{
@@ -40,8 +40,8 @@ app.post('/create', (req, res) => {
 			records.push({
 				id: ID(),
 				position: position,
-				title: title,
-				description: desc
+				name: name,
+				age: age
 			})
 
 			fs.writeFile("./data/records.json", JSON.stringify(records), err => {
