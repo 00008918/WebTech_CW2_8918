@@ -11,7 +11,7 @@
 
 a {
 	text-decoration: none;
-	color: #444
+	color: #000
 }
 
 .content,
@@ -20,27 +20,46 @@ a {
 	margin: 0 auto;
 }
 
+.content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
 .header {
 	display: flex;
 	justify-content: space-between;
 	align-items: baseline;
 	border-bottom: 1px solid #ccc;
+	padding: 10px 0;
 }
 
 .logo {
 	padding-left: 20px;
-	font-size: 4rem;
+	font-size: 2rem;
+	font-family: 'Black Ops One', cursive;
+	
+	
+}
+.logo a{
+	color: tomato;
+	background-color: black;
+	padding: 0px 10px;
+	transition: color .4s ease-in;
 }
 
 .logo > a:hover {
-	color: tomato;
+	color: rgb(255, 255, 255);
 }
 
 .nav > a {
 	display: inline-block;
 	padding: 5px 15px;
 	font-size: 1.5rem;
+	font-weight: bold;
 	font-variant-caps: small-caps;
+	
 }
 
 
@@ -54,6 +73,7 @@ a {
 	margin-top: 150px;
 	padding: 20px 0 0 20px;
 	font-size: 3.5rem;
+	text-align: center;
 }
 
 .featured {
@@ -62,7 +82,9 @@ a {
 	padding: 10px 20px;
 	background-color: tomato;
 	color: #fff;
+	font-weight: bold;
 	font-size: 1.4rem;
+	border-radius: 3px;
 }
 
 /* create page styles */
@@ -106,7 +128,7 @@ a {
 /* notes page */
 .note-wrapper {
 	margin-top: 20px;
-	max-width: 60%;
+	min-width: 60%;
 	display: flex;
 	padding: 0 10px;
 	justify-content: space-between;
@@ -133,12 +155,30 @@ a {
 
 
 /* note detail page */
-.note-title {
-	padding: 20px 0 0 20px;
+.details{
+width: 100%;
+height: 90vh;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
 }
 
-.note-desc {
-	padding: 20px 0 0 20px;
+.record-title {
+	font-size: 3rem;
+	margin-top: 20px;
+}
+
+.record-desc {
+	font-size: 2rem;
+	margin-top: 20px;
+	font-weight: bold;
+}
+
+.record-position {
+	font-size: 2rem;
+	margin-top: 20px;
+	font-weight: bold;
 }
 
 .error{

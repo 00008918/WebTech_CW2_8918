@@ -107,6 +107,20 @@ function deleteOne(id, successCb, errorCb) {
     });
   }
 
+  //BASIC API 
+
+  app.get("/api/v1/records", (req,res) => {
+	fs.readFile("./data/records.json", (err,data) => {
+	  if(err) throw err
+  
+	  const records = JSON.parse(data)
+  
+	  res.json(records)
+	})
+  })
+
+  //LISTENING TO THE SERVER
+
 app.listen(8000, err => {
 	if(err) throw err
 
