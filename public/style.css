@@ -221,9 +221,94 @@ span{
 	background-color: rgb(144, 252, 162);
 }
 
+
+/*FOOTER*/
 .footer{
 	width: 100%;
-	height: 15vh;
+	height: auto;
 	margin-top: 100px;
-	border-top: 1px solid rgb(182, 182, 182);
+	border-top: 1px solid rgb(216, 216, 216);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 20px;
+	position: relative;
+}
+
+.footer:before{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: "";
+	background-color: whitesmoke;
+	z-index: -2;
+}
+
+.footer .contacts{
+	
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 100%;
+	
+}
+
+.footer .contacts .icon{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: rgb(36, 36, 36);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+	position: relative;
+	transition: .5s;
+	cursor: pointer;
+}
+
+.footer .contacts .icon i{
+	font-size: 1.5rem;
+	color: #666;
+	
+}
+
+.footer .contacts .icon:before{
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	background-color: #d35400;
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	z-index: -1;
+	transform: scale(0.9);
+	transition: .5s;
+}
+.footer .contacts .icon:hover:before{
+	filter: blur(3px);
+	transform: scale(1.2);
+	box-shadow: 0 0 15px tomato;
+}
+.footer .contacts .icon:hover i{
+	color: #ffa502;
+	
+	
+}
+
+.footer .id{
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.footer .id p{
+	font-size: 0.7rem;
+	text-align: center;
+	padding: 10px 20px;
 }

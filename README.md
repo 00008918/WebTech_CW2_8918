@@ -1,11 +1,33 @@
-# Notes app
+# Human Recources management Application (HrPro)
 
-## Front end workshop (finished)
+### This web application can be used to add, read and delete employee data
 
-Feel free to change project files and use as a basis for your coursework
+In order to run this web app locally you need to follow the guidelines given below
 
-## Back end workshop (week 1)
+1. Clone this repository
+```bash
+git clone https://github.com/00008918/WebTech_CW2_8918
+```
 
-To do:
-  - get user data (create form page) and save to file
-  - show saved data to the user (note list page)
+2. Install dependencies
+```bash
+cd [project folder]
+npm install pug
+npm install express
+```
+
+3. Run the Application
+```bash
+cd [project folder]
+node app
+```
+
+### Web Application dependencies
+- express.js
+- pug.js
+
+### Web Application Repository link
+https://github.com/00008918/WebTech_CW2_8918
+
+### Web App live, hosted on Glitch
+
