@@ -2,8 +2,11 @@ extends layout.pug
 
 block content
   main.details
-    h1.record-title Name : #{ record.name }
-    p.record-desc Age : #{ record.age }
-    p.record-position Position : #{ record.position }
+    h1.record-name Name : 
+      span #{ record.name }
+    p.record-age Age : 
+      span #{ record.age }
+    p.record-position Position : 
+      span #{ record.position }
   
   

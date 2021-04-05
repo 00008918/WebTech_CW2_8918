@@ -2,9 +2,9 @@ extends layout.pug
 
 block content
   main.content
-    h1.note-title All employees
+    h1.all-employees All employees
 
     each value in recordList
-      div.note-wrapper
-        a.note(href=`/records/${  value.id }`)= value.name
+      div.record-wrapper
+        a.record(href=`/records/${  value.id }`)= value.name
         a.delete(href=`/${ value.id }/delete`) Delete
